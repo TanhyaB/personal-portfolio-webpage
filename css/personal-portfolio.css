@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=M+PLUS+1+Code:wght@400;500&display=swap');
+
+/*********************GENERAL STYLING***********************************/
+html{
+ms-overflow-style: none;  /*Edge and IE*/
+scrollbar-width: none; /*FireFox*/
+}
+
+*{
+    box-sizing: border-box:;
+}
+
+body{
+    background-color: #484f4f;
+    /* #c8c3cc #484f4f #563f46 #ff6f69*/
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+ }
+
+/***section header style(projects & contact)***/
+section h2{
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 33px;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffff;
+    margin: 5px;
+    padding: 15px;
+}
+
+#contact-header{
+    padding: 10px 0;
+}
+
+/***about section (into, name, subtitle)***/
+header, #about, #welcome-section{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+
+/***header (name) and subtitle style***/
+header h1{
+    font-family: 'M PLUS 1 Code', sans-serif;
+    font-size: 70px;
+    color: #fff;
+    text-transform: uppercase;
+
+    margin: 0;
+}
+
+header h4{
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+#intro{
+    font-size: 15px;
+    font-weight: lighter;
+    color: #fff;
+    text-align: center;
+}
+
+#sub{
+  text-transform: uppercase;
+  color: #ff6f69;
+  font-size: 15px;
+}
+
+/*********************************NAVIGATION***************************************/
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px;
+    position: fixed;
+    /*center's the nav bar across the entire width of the page*/
+    top: 0;
+    left: 0;
+    right: 0;
+    /*center's the nav bar across the entire width of the page*/
+    z-index: 100; /*specifies the stack order of an element*/
+    background-color: #c8c3cc;
+    color: #fff;
+}
+
+#navbar a{
+    color: #563f46;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+#navbar a:hover{
+    color: #000;
+}
+
+/*********************************PROJECTS SECTION***************************************/
+.container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+}
+
+#projects{
+    padding: 20px 0;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+}
+/******header (projects)********/
+#projects .project-tile{
+    padding-bottom: 25px;
+}
+
+#projects .cards{
+    display: grid;
+    display-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+#projects .cards .card{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+/******reduces the size of the card*****/
+#projects .cards .card img{
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+    border-radius: 3px;
+}
+
+#projects .cards .card figcaption{
+    position: absolute;
+    z-index: 2; /*places the text above the image*/
+    color: #c8c3cc;
+    font-size: 20px;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+}
+
+/*********************************CONTACT SECTION***************************************/
+.social-links {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    padding-bottom: 35px;
+}
+
+.social-links a{
+    color: #fff;
+    font-size: 40px;
+    margin: 0 15px;
+    margin-bottom: 10px;
+}
+
+/***button to all projects***/
+#profile-link {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #c8c3cc;
+    color: #563f46;
+    padding: 15px 0;
+    text-decoration: none;
+    margin: 50px 0;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*********************************FOOTER SECTION***************************************/
+footer {
+    background-color: #c8c3cc;
+    color: #563f46;
+    padding: 15px;
+    text-align: center;
+
+}
+
+footer .fa-heart{
+    color: #fff;
+    margin: 0 5px;
+}
+
+/*********************************MEDIA QUERIES***************************************/
+@media (max-width: 480px) {
+  #navbar {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #c8c3cc;
+    color: #fff;
+    }
+    #navbar a {
+        align-items: center;
+    }}
+
+
+@media (min-width: 600px){
+#projects .cards{
+    grid-template-columns: 1fr 1fr;
+}}
+
+@media (min-width: 1280px){
+#projects .cards{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#projects{
+    padding: 20px 0;
+    /*min-height: 100vh;*/
+    align-items: center;
+    display: flex;
+}
+
+}
